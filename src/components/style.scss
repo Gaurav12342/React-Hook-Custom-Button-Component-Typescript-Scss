@@ -79,7 +79,7 @@ $disabled_blue: #4476af;
     }
   }
 
-  .danger {
+  .error {
     background-color: $red_color;
 
     &:hover {
@@ -101,5 +101,17 @@ $disabled_blue: #4476af;
       cursor: not-allowed;
       text-decoration: none;
     }
+  }
+
+  .medium {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .large {
+    padding: 20px 40px 20px 40px;
+  }
+
+  .small {
+    padding: 5px 10px 5px 10px;
   }
 }

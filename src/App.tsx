@@ -1,11 +1,14 @@
 import React, { FC } from 'react';
 import './App.css';
-import CustomButton from './components/CustomButton';
+import Button from './components/CustomButton';
 
 const App: FC = () => {
   return (
     <div>
-      <CustomButton color="success" disabled={false}>Okay</CustomButton>
+      <Button variant="contained" size="small" disabled={false}>Okay</Button>
+      <Button variant="outlined" size="medium" disabled={false}>Okay</Button>
+      <Button color="success" size="large" disabled={false}>Okay</Button>
+      <Button color="error" size="small" disabled={false}>Okay</Button>
     </div>
   );
 }
