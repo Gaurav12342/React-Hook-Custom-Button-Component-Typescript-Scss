@@ -1,0 +1,105 @@
+$color_1: #ffffff;
+$container_color: #1976d2;
+$green_color: #047904;
+$red_color: #ff0528;
+$light_gray: lightgray;
+$disabled_green: #5dab4f;
+$disabled_red: #cf7d7d;
+$disabled_blue: #4476af;
+
+.root {
+  margin: 10px;
+  .common-container {
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    color: $color_1;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.25s;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  // button variant "contained" or "outline"
+  .contained {
+    background-color: $container_color;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    &:active {
+      background: $light_gray;
+      opacity: 1;
+      transition: all 0.5s;
+    }
+
+    &:disabled {
+      background-color: $disabled_blue;
+      color: $light_gray;
+      box-shadow: none;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  }
+  .outlined {
+    background-color: $color_1;
+    color: $container_color;
+    border: 1px solid $container_color;
+  }
+
+  // Button color "success" or "danger"
+  .success {
+    background-color: $green_color;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    &:active {
+      background: $light_gray;
+      opacity: 1;
+      transition: all 0.5s;
+    }
+
+    &:disabled {
+      background-color: $disabled_green;
+      color: $light_gray;
+      box-shadow: none;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  }
+
+  .danger {
+    background-color: $red_color;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    &:active {
+      background: $light_gray;
+      opacity: 1;
+      transition: all 0.5s;
+    }
+
+    &:disabled {
+      background-color: $disabled_red;
+      color: $light_gray;
+      box-shadow: none;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  }
+}
