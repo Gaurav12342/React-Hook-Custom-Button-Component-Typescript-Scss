@@ -1,12 +1,10 @@
 import React, { FC } from 'react'
 import '../components/style.scss';
 
-const CustomButton: FC<any> = ({ variant = "contained", disabled = false, children = "Submit", onClick, color, size = "medium" }) => {
+const CustomButton: FC<any> = ({ variant = "contained", disabled = false, children = "Submit", onClick, color, size = "medium", loading = false }) => {
 
     const handleButtonClick = () => {
-        if (onClick) {
-            onClick();
-        }
+        onClick && onClick()
     }
 
     return (
@@ -15,8 +13,8 @@ const CustomButton: FC<any> = ({ variant = "contained", disabled = false, childr
                 className={`common-container ${variant} ${color} ${size}`}
                 disabled={disabled}
                 onClick={handleButtonClick}
-            >{children}</button>
-        </div>
+            >{loading ? <div className="loader" /> : children}</button>
+        </div >
     )
 }
 
